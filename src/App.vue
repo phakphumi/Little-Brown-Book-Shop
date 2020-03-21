@@ -7,41 +7,16 @@
 </template>
 
 <script>
-import { Layout } from 'ant-design-vue';
 
-import AppFooter from './components/layout/AppFooter';
-import AppHeader from './components/layout/AppHeader';
-
-const { Content } = Layout;
+import Layout from './components/Layout';
 
 export default {
   name: 'App',
-  components: {
-    AppHeader,
-    AppFooter,
-    Layout,
-    Content,
-  },
+  components: { Layout },
 };
 </script>
 
 <style scoped lang="scss">
-  $header-height: 64px;
-  $footer-height: 69px;
-
-  .header {
-    height: $header-height;
-  }
-
-  .content {
-    margin-top: $header-height;
-    min-height: calc(100vh - #{$header-height} - #{$footer-height});
-  }
-
-  .footer {
-    height: $footer-height;
-  }
-
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;

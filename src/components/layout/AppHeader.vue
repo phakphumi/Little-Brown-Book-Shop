@@ -27,7 +27,7 @@ export default {
     top: 0px;
     width: 100%;
     z-index: 9999;
-    background-color: #C8A58C;
+    background-color: #07B53B;
 
     .logo {
       float: left;

@@ -2,7 +2,7 @@
   <Footer class="footer">
     <Row type="flex" justify="center" align="middle">
       <Col>
-        <span>©LITTLE BROWN BOOK SHOP </span>
+        <span>© LITTLE BROWN BOOK SHOP </span>
       </Col>
     </Row>
   </Footer>
