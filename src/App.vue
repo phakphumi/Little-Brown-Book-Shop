@@ -1,18 +1,19 @@
 <template>
   <Layout>
-    <AppHeader class="header" />
-    <Content class="content" />
-    <AppFooter class="footer" />
+    <PointOfSalePage />
   </Layout>
 </template>
 
 <script>
-
 import Layout from './components/Layout';
+import PointOfSalePage from './pages/PointOfSalePage';
 
 export default {
   name: 'App',
-  components: { Layout },
+  components: {
+    Layout,
+    PointOfSalePage,
+  },
 };
 </script>
 
