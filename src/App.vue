@@ -1,16 +1,25 @@
 <template>
-  <div id="app">
+  <Layout>
     <AppHeader />
-  </div>
+    <Content />
+    <AppFooter />
+  </Layout>
 </template>
 
 <script>
-import AppHeader from './components/layout/AppHeader.vue';
+import AppHeader from './components/layout/AppHeader';
+import AppFooter from './components/layout/AppFooter';
+import { Layout } from 'ant-design-vue';
+
+const { Content } = Layout;
 
 export default {
   name: 'App',
   components: {
     AppHeader,
+    AppFooter,
+    Layout,
+    Content,
   }
 }
 </script>

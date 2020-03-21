@@ -1,27 +1,31 @@
 <template>
-  <div class="header">
-    <span class="logo">Little Brown Book Shop</span>
-  </div>
+  <Header class="header">
+  </Header>
 </template>
 
 <script>
+import { Layout } from 'ant-design-vue';
+
+const { Header } = Layout;
+
 export default {
-  name: 'AppHeader'
+  name: 'AppHeader',
+  components: { Header }
 }
 </script>
 
 <style scoped lang="scss">
   .header {
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    height: 64px;
-    z-index: 9999;
+    // position: fixed;
+    // top: 0px;
+    // width: 100%;
+    // height: 64px;
+    // z-index: 9999;
     background-color: #C8A58C;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
 
     .logo {
       color: white;
