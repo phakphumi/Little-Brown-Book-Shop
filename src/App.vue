@@ -7,9 +7,10 @@
 </template>
 
 <script>
-import AppHeader from './components/layout/AppHeader';
-import AppFooter from './components/layout/AppFooter';
 import { Layout } from 'ant-design-vue';
+
+import AppFooter from './components/layout/AppFooter';
+import AppHeader from './components/layout/AppHeader';
 
 const { Content } = Layout;
 
@@ -20,8 +21,8 @@ export default {
     AppFooter,
     Layout,
     Content,
-  }
-}
+  },
+};
 </script>
 
 <style>

@@ -10,8 +10,8 @@ const { Header } = Layout;
 
 export default {
   name: 'AppHeader',
-  components: { Header }
-}
+  components: { Header },
+};
 </script>
 
 <style scoped lang="scss">

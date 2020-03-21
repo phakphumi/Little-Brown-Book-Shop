@@ -11,5 +11,5 @@ const { Footer } = Layout;
 export default {
   name: 'AppFooter',
   components: { Footer },
-}
+};
 </script>
