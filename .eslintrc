@@ -1,0 +1,42 @@
+{
+  "root": true,
+  "env": {
+    "node": true
+  },
+  "plugins": [
+    "simple-import-sort"
+  ],
+  "extends": [
+    "plugin:vue/essential",
+    "eslint:recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "parser": "babel-eslint"
+  },
+  "rules": {
+    "comma-dangle": ["error", "always-multiline"],
+    "eol-last": "error",
+    "key-spacing": "error",
+    "import/order": "off",
+    "indent": ["error", 2, { "SwitchCase": 1, "ignoreComments": true } ],
+    "no-trailing-spaces": "error",
+    "object-curly-spacing": ["error", "always"],
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    "semi": "error",
+    "simple-import-sort/sort": "error",
+    "sort-imports": "off",
+    "vue/no-parsing-error": ["error", { "x-invalid-end-tag": false }]
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {
+        "@": "./src"
+      }
+    }
+  }
+}
