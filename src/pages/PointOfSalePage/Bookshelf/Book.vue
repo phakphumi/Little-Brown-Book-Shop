@@ -1,0 +1,107 @@
+<template>
+  <Card
+    hoverable
+    class="card"
+  >
+    <div
+      slot="cover"
+      class="coverImgContainer"
+    >
+      <img
+        :alt="title"
+        :src="coverUrl"
+        class="coverImg"
+      />
+    </div>
+    <div class="title">{{title}}</div>
+    <template slot="actions">
+      <div class="priceBar">
+        <Icon type="shopping-cart" />
+        {{ price }} ฿
+      </div>
+    </template>
+  </Card>
+</template>
+
+<script>
+import {
+  Card,
+  Icon,
+} from 'ant-design-vue';
+
+export default {
+  name: 'Book',
+  props: {
+    title: {
+      type: String,
+      required: true,
+      default: '',
+    },
+    price: {
+      type: Number,
+      required: true,
+      default: 0,
+    },
+    coverUrl: {
+      type: String,
+      required: true,
+      default: '',
+    },
+    isbn: {
+      type: String,
+      required: true,
+      default: '',
+    },
+
+  },
+  components: {
+    Card,
+    Icon,
+  },
+};
+</script>
+
+<style lang="scss">
+  .card {
+    .ant-card-body {
+      padding: 12px;
+    }
+
+    .ant-card-actions {
+      background-color: #00410F;
+    }
+  }
+</style>
+
+<style scoped lang="scss">
+  .card {
+    margin: 8px;
+
+    .coverImgContainer {
+      height: 280px;
+
+      .coverImg {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .title {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      font-size: 16px;
+      font-weight: bold;
+      height: 48px;
+    }
+
+    .priceBar {
+      font-weight: bold;
+      color: #FFFFFF;
+    }
+  }
+</style>
