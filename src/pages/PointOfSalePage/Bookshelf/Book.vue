@@ -1,5 +1,6 @@
 <template>
   <Card
+    @click="addToCart"
     hoverable
     class="card"
   >
@@ -52,7 +53,15 @@ export default {
       required: true,
       default: '',
     },
-
+  },
+  methods: {
+    addToCart() {
+      this.$store.commit('cart/addToCart', {
+        isbn: this.isbn,
+        title: this.title,
+        price: this.price,
+      });
+    },
   },
   components: {
     Card,
