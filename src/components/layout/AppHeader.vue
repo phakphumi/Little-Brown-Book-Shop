@@ -1,5 +1,12 @@
 <template>
   <Header class="header">
+    <Row type="flex" justify="center" align="middle">
+      <Col>
+        <div class="logo">
+          Little Brown Book Shop
+        </div>
+      </Col>
+    </Row>
   </Header>
 </template>
 
@@ -16,18 +23,14 @@ export default {
 
 <style scoped lang="scss">
   .header {
-    // position: fixed;
-    // top: 0px;
-    // width: 100%;
-    // height: 64px;
-    // z-index: 9999;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 9999;
     background-color: #C8A58C;
 
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-
     .logo {
+      float: left;
       color: white;
       font-size: 24px;
       font-weight: bold;

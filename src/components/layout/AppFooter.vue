@@ -1,6 +1,10 @@
 <template>
   <Footer class="footer">
-    <span>©LITTLE BROWN BOOK SHOP </span>
+    <Row type="flex" justify="center" align="middle">
+      <Col>
+        <span>©LITTLE BROWN BOOK SHOP </span>
+      </Col>
+    </Row>
   </Footer>
 </template>
 
@@ -13,3 +17,11 @@ export default {
   components: { Footer },
 };
 </script>
+
+<style scoped lang="scss">
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%
+  }
+</style>

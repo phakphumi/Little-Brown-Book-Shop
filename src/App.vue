@@ -1,8 +1,8 @@
 <template>
   <Layout>
-    <AppHeader />
-    <Content />
-    <AppFooter />
+    <AppHeader class="header" />
+    <Content class="content" />
+    <AppFooter class="footer" />
   </Layout>
 </template>
 
@@ -25,17 +25,33 @@ export default {
 };
 </script>
 
-<style>
-body {
-  margin: 0;
-}
+<style scoped lang="scss">
+  $header-height: 64px;
+  $footer-height: 69px;
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  .header {
+    height: $header-height;
+  }
+
+  .content {
+    margin-top: $header-height;
+    min-height: calc(100vh - #{$header-height} - #{$footer-height});
+  }
+
+  .footer {
+    height: $footer-height;
+  }
+
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
+
+  body {
+    margin: 0;
+  }
 </style>
