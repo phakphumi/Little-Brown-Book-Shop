@@ -1,14 +1,15 @@
 export default {
+  namespaced: true,
   state: {
     selectedBooks: {},
   },
   mutations: {
-    pickBook ({ selectedBooks }, { isbn, title, price }) {
-      if (selectedBooks[isbn]) {
-        selectedBooks[isbn].quantity++;
+    addToCart (state, { isbn, title, price }) {
+      if (state.selectedBooks[isbn]) {
+        state.selectedBooks[isbn].quantity++;
       } else {
-        selectedBooks = {
-          ...selectedBooks,
+        state.selectedBooks = {
+          ...state.selectedBooks,
           [isbn]: {
             title,
             price,
@@ -17,16 +18,16 @@ export default {
         };
       }
     },
-    removeBook ({ selectedBooks }, isbn) {
-      if (!selectedBooks[isbn]) {
+    deductItemCount (state, isbn) {
+      if (!state.selectedBooks[isbn]) {
         return;
-      } else if (selectedBooks[isbn].quantity > 1) {
-        selectedBooks[isbn].quantity--;
+      } else if (state.selectedBooks[isbn].quantity > 1) {
+        state.selectedBooks[isbn].quantity--;
       } else {
-        delete selectedBooks[isbn];
+        delete state.selectedBooks[isbn];
       }
     },
-    clearBooks (state) {
+    clearCart (state) {
       state.selectedBooks = {};
     },
   },
