@@ -1,5 +1,5 @@
 <template>
-  <Row>
+  <Row class="bookshelf">
     <Col
       v-for="book in books"
       :key="book.isbn"
@@ -219,5 +219,7 @@ export default {
 </script>
 
 <style scoped>
-
+  .bookshelf {
+    overflow: scroll;
+  }
 </style>

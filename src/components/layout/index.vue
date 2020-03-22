@@ -37,7 +37,7 @@ export default {
 
   .content {
     margin-top: $header-height;
-    min-height: calc(100vh - #{$header-height} - #{$footer-height});
+    height: calc(100vh - #{$header-height} - #{$footer-height});
   }
 
   .footer {

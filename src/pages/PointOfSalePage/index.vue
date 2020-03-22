@@ -4,24 +4,30 @@
       <Bookshelf />
     </Col>
     <Col :span="8">
-      <Basket />
+      <Cart />
     </Col>
   </Row>
 </template>
 
 <script>
-import Basket from './Basket';
 import Bookshelf from './Bookshelf';
+import Cart from './Cart';
 
 export default {
   name: 'PointOfSalePage',
   components: {
-    Basket,
     Bookshelf,
+    Cart,
   },
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+  .bookshelf-col {
+    height: inherit;
+  }
 
+  [class^="ant-col"], [class*=" ant-col"] {
+    height: inherit;
+  }
 </style>

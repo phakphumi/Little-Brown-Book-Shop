@@ -17,7 +17,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -29,5 +29,9 @@ export default {
 
   body {
     margin: 0;
+  }
+
+  .ant-row {
+    height: inherit;
   }
 </style>
