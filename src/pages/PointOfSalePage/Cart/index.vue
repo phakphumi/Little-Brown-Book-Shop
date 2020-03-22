@@ -1,17 +1,22 @@
 <template>
   <div class="cart">
     <ItemList class="itemList" />
-    <TotalCost class="totalCost" />
+    <div class="footer">
+      <TotalCost />
+      <ButtonGroup />
+    </div>
   </div>
 </template>
 
 <script>
+import ButtonGroup from './ButtonGroup';
 import ItemList from './ItemList';
 import TotalCost from './TotalCost';
 
 export default {
   name: 'Cart',
   components: {
+    ButtonGroup,
     ItemList,
     TotalCost,
   },
@@ -31,9 +36,13 @@ export default {
       overflow: scroll;
     }
 
-    .totalCost {
-      height: 20%;
+
+    .footer {
+      height: 30%;
       overflow: scroll;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
   }
 </style>
