@@ -102,4 +102,8 @@ export default {
     height: unset;
     overflow: scroll;
   }
+
+  .ant-btn {
+    padding: 1px 7px 2px;
+  }
 </style>

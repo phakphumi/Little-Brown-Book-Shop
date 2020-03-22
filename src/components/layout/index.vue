@@ -38,6 +38,10 @@ export default {
   .content {
     margin-top: $header-height;
     height: calc(100vh - #{$header-height} - #{$footer-height});
+
+    @include mobile-view {
+      height: auto;
+    }
   }
 
   .footer {

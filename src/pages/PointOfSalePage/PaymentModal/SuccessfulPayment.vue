@@ -27,7 +27,7 @@ export default {
 
     .success-icon {
       font-size: 60px;
-      color: #07B53B;
+      color: $color-forest-green;
     }
   }
 </style>

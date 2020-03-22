@@ -27,7 +27,7 @@ export default {
     top: 0px;
     width: 100%;
     z-index: 9999;
-    background-color: #07B53B;
+    background-color: $color-forest-green;
 
     .logo {
       float: left;

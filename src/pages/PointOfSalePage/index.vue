@@ -1,10 +1,18 @@
 <template>
   <div class="point-of-sale">
     <Row>
-      <Col :span="16">
+      <Col
+        :xs="24"
+        :md="12"
+        :lg="14"
+      >
         <Bookshelf />
       </Col>
-      <Col :span="8">
+      <Col
+        :xs="24"
+        :md="12"
+        :lg="10"
+      >
         <Cart />
       </Col>
     </Row>
@@ -33,10 +41,19 @@ export default {
 
     .bookshelf-col {
       height: inherit;
+
+      @include mobile-view {
+        height: auto;
+      }
     }
   }
 
   [class^="ant-col"], [class*=" ant-col"] {
     height: inherit;
+
+    @include mobile-view {
+      height: auto;
+    }
   }
+
 </style>

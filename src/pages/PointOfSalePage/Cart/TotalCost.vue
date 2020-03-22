@@ -2,13 +2,13 @@
   <div>
     <Row>
       <Col
-        :span="18"
+        :span="16"
         class="row-title"
       >
         Total Discount:
       </Col>
       <Col
-        :span="6"
+        :span="8"
         class="row-value"
       >
         {{ totalDiscount }} Baht
@@ -16,13 +16,13 @@
     </Row>
     <Row>
       <Col
-        :span="18"
+        :span="16"
         class="row-title"
       >
         Total Cost:
       </Col>
       <Col
-        :span="6"
+        :span="8"
         class="row-value"
       >
         {{ totalCost }} Baht
@@ -31,13 +31,13 @@
     <template v-if="isChangeEnabled">
       <Row>
         <Col
-          :span="18"
+          :span="16"
           class="row-title"
         >
           Cash:
         </Col>
         <Col
-          :span="6"
+          :span="8"
           class="row-value"
         >
           {{ receivedCash }} Baht
@@ -45,13 +45,13 @@
       </Row>
       <Row>
         <Col
-          :span="18"
+          :span="16"
           class="row-title"
         >
           Change:
         </Col>
         <Col
-          :span="6"
+          :span="8"
           class="row-value"
         >
           {{ changeCash }} Baht

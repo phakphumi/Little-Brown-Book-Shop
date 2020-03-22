@@ -3,8 +3,8 @@
     <Col
       v-for="book in books"
       :key="book.isbn"
-      :md="6"
-      :sm="8"
+      :xs="12"
+      :md="8"
     >
       <Book v-bind="book" />
     </Col>

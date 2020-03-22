@@ -27,7 +27,7 @@ export default {
   .cart {
     height: inherit;
     background-color: #FFFFFF;
-    border: 2px solid #00410F;
+    border: 2px solid $color-green2;
     margin: 8px;
     padding: 8px;
 

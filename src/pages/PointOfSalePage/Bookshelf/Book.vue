@@ -77,7 +77,7 @@ export default {
     }
 
     .ant-card-actions {
-      background-color: #00410F;
+      background-color: $color-green2;
     }
   }
 </style>
@@ -87,7 +87,14 @@ export default {
     margin: 8px;
 
     .coverImgContainer {
-      height: 280px;
+      height: 260px;
+
+      @include tablet-view {
+        height: 170px;
+      }
+      @include mobile-view {
+        height: 280px;
+      }
 
       .coverImg {
         width: 100%;
