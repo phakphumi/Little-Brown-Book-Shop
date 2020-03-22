@@ -37,13 +37,23 @@
         :span="6"
         class="row-quantity-group"
       >
-        <Button @click="deductItemCount(isbn)">-</Button>
+        <Button
+          @click="deductItemCount(isbn)"
+          v-if="!isFormDisabled"
+        >
+          -
+        </Button>
         {{ book.quantity }}
-        <Button @click="addToCart({
-          isbn,
-          title: book.title,
-          price: book.price
-        })">+</Button>
+        <Button
+          @click="addToCart({
+            isbn,
+            title: book.title,
+            price: book.price
+          })"
+          v-if="!isFormDisabled"
+        >
+          +
+        </Button>
       </Col>
     </Row>
   </div>
@@ -58,6 +68,15 @@ import {
 
 export default {
   name: 'ItemList',
+  props: {
+    isFormDisabled: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  updated: function () {
+    console.log(this.isFormDisabled);
+  },
   computed: {
     ...mapState({
       books: state => state.cart.selectedBooks,
