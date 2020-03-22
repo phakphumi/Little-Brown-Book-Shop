@@ -19,6 +19,7 @@
         type="primary"
         size="large"
         :disabled="isDisabledBtn"
+        @click="paymentBtnClick"
       >
         Payment
       </Button>
@@ -40,6 +41,7 @@ export default {
   },
   methods: {
     ...mapMutations('cart', ['clearCart']),
+    ...mapMutations('payment', ['paymentBtnClick']),
   },
   components: { Button },
 };
