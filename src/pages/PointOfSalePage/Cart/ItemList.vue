@@ -74,9 +74,6 @@ export default {
       default: false,
     },
   },
-  updated: function () {
-    console.log(this.isFormDisabled);
-  },
   computed: {
     ...mapState({
       books: state => state.cart.selectedBooks,
