@@ -41,7 +41,7 @@ export default {
   },
   mounted: async function() {
     try {
-      const { data: { books } } = await axios.get('https://wt-0ca4cb2ec912fe2638414048c3f114a1-0.sandbox.auth0-extend.com/little-brown-api-dev/book-list');
+      const { data: { books } } = await axios.get(process.env.VUE_APP_BOOK_LIST_API);
       this.booksResponse = books;
     } catch (error) {
       message.error(error.message);

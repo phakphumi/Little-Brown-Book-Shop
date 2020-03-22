@@ -1,18 +1,9 @@
 import {
   reduce,
+  split,
   toNumber,
 } from 'lodash';
 import Vue from 'vue';
-
-const DISCOUNT_BOOKS = [
-  '9781408855652',
-  '9781408855669',
-  '9781408855676',
-  '9781408855683',
-  '9781408855690',
-  '9781408855706',
-  '9781408855713',
-];
 
 export default {
   namespaced: true,
@@ -21,9 +12,12 @@ export default {
   },
   getters: {
     totalDiscount: (state) => {
+      const discountBooksEnv = process.env.VUE_APP_DISCOUNT_BOOKS;
+      const discountBooks = discountBooksEnv ? split(discountBooksEnv, ',') : [];
+
       const selectedBooks = state.selectedBooks;
 
-      const { uniqueBooks, uniqueBooksTotalCost } = reduce(DISCOUNT_BOOKS, (booksToDiscount, isbn) => {
+      const { uniqueBooks, uniqueBooksTotalCost } = reduce(discountBooks, (booksToDiscount, isbn) => {
         if (selectedBooks[isbn]) {
           booksToDiscount.uniqueBooks += 1;
           booksToDiscount.uniqueBooksTotalCost += selectedBooks[isbn].price;
