@@ -22,7 +22,7 @@
         :disabled="isDisabledNextBtn"
         @click="handlePrimaryBtnClick"
       >
-        <template v-if="paymentStep === 1">Next</template>
+        <template v-if="paymentStep === 1">Pay</template>
         <template v-else-if="paymentStep === 2">View Receipt</template>
         <template v-else>Done</template>
       </Button>
