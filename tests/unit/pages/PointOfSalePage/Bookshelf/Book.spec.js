@@ -1,8 +1,35 @@
-import { shallowMount } from '@vue/test-utils';
+import {
+  createLocalVue,
+  shallowMount,
+} from '@vue/test-utils';
+import Vuex from 'vuex';
 
 import Book from '@/pages/PointOfSalePage/Bookshelf/Book';
 
-describe('App.vue', () => {
+const localVue = createLocalVue();
+
+localVue.use(Vuex);
+
+describe('Book.vue', () => {
+  let mutations;
+  let store;
+
+  beforeEach(() => {
+
+    mutations = {
+      addToCart: jest.fn(),
+    };
+
+    store = new Vuex.Store({
+      modules: {
+        cart: {
+          mutations,
+          namespaced: true,
+        },
+      },
+    });
+  });
+
   it('must contains img title and price from prop', async () => {
     const propsData = {
       title: 'any string',
@@ -12,13 +39,15 @@ describe('App.vue', () => {
     };
     const wrapper = shallowMount(Book, {
       propsData,
+      store,
+      localVue,
       stubs: ['Col', 'Row'],
-      methods: {
-        addToCart: jest.fn(),
-      },
     });
     expect(wrapper.find('img').attributes('src')).toBe(propsData.coverUrl);
     expect(wrapper.find('.title').text()).toContain(propsData.title);
     expect(wrapper.find('.priceBar').text()).toContain(propsData.price);
+
+    wrapper.vm.addToCart();
+    expect(mutations.addToCart).toHaveBeenCalled();
   });
 });
