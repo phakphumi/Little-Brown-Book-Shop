@@ -1,27 +1,27 @@
 <template>
-  <Layout>
+  <AntdLayout>
     <AppHeader class="header" />
     <Content class="content">
       <slot />
     </Content>
     <AppFooter class="footer" />
-  </Layout>
+  </AntdLayout>
 </template>
 
 <script>
-import { Layout } from 'ant-design-vue';
+import { Layout as AntdLayout } from 'ant-design-vue';
 
 import AppFooter from './AppFooter';
 import AppHeader from './AppHeader';
 
-const { Content } = Layout;
+const { Content } = AntdLayout;
 
 export default {
   name: 'Layout',
   components: {
     AppHeader,
     AppFooter,
-    Layout,
+    AntdLayout,
     Content,
   },
 };
