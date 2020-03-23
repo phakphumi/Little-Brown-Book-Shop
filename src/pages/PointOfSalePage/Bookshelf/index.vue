@@ -41,7 +41,11 @@ export default {
   },
   mounted: async function() {
     try {
-      const { data: { books } } = await axios.get(process.env.VUE_APP_BOOK_LIST_API);
+      const { data: { books } } = await axios.get(process.env.VUE_APP_BOOK_LIST_API, {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      });
       this.booksResponse = books;
     } catch (error) {
       message.error(error.message);
