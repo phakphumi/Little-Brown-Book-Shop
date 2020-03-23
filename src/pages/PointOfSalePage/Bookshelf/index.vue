@@ -35,7 +35,7 @@ export default {
         coverUrl: book.cover,
         isbn: book.id,
         title: book.title,
-        price: round(book.price, 2),
+        price: round(book.price),
       }));
     },
   },
