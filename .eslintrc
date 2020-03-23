@@ -19,24 +19,52 @@
     "parser": "babel-eslint"
   },
   "rules": {
-    "comma-dangle": ["error", "always-multiline"],
+    "comma-dangle": [
+      "error",
+      "always-multiline"
+    ],
     "eol-last": "error",
     "key-spacing": "error",
     "import/order": "off",
-    "indent": ["error", 2, { "SwitchCase": 1, "ignoreComments": true } ],
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1,
+        "ignoreComments": true
+      }
+    ],
     "no-trailing-spaces": "error",
-    "object-curly-spacing": ["error", "always"],
-    "quotes": ["error", "single", { "avoidEscape": true }],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ],
     "semi": "error",
     "simple-import-sort/sort": "error",
     "sort-imports": "off",
-    "vue/no-parsing-error": ["error", { "x-invalid-end-tag": false }]
+    "vue/no-parsing-error": [
+      "error",
+      {
+        "x-invalid-end-tag": false
+      }
+    ]
   },
-  "settings": {
-    "import/resolver": {
-      "babel-module": {
-        "@": "./src"
+  "overrides": [
+    {
+      "files": [
+        "**/__tests__/*.{j,t}s?(x)",
+        "**/tests/unit/**/*.spec.{j,t}s?(x)"
+      ],
+      "env": {
+        "jest": true
       }
     }
-  }
+  ]
 }

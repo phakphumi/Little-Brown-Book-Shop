@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import ItemList from '@/pages/PointOfSalePage/Cart/ItemList';
-import TotalCost from '@/pages/PointOfSalePage/Cart/TotalCost';
+import ItemList from '../Cart/ItemList';
+import TotalCost from '../Cart/TotalCost';
 
 export default {
   name: 'Receipt',
