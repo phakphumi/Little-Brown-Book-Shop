@@ -17,7 +17,7 @@ import AppHeader from './AppHeader';
 const { Content } = Layout;
 
 export default {
-  name: 'App',
+  name: 'Layout',
   components: {
     AppHeader,
     AppFooter,
