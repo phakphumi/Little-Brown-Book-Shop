@@ -6,6 +6,7 @@
     <Col :span="12">
       <Button
         block
+        id="clear-cart-btn"
         size="large"
         :disabled="isDisabledBtn"
         @click="clearCart"
@@ -16,6 +17,7 @@
     <Col :span="12">
       <Button
         block
+        id="payment-btn"
         type="primary"
         size="large"
         :disabled="isDisabledBtn"
