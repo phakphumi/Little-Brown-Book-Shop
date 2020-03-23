@@ -18,4 +18,6 @@ This is the best project which I can do during the limit of time. I used 3 days 
 ## ENV Description
 - `VUE_APP_BOOK_LIST_API` is used to set the book API url.
 - `VUE_APP_DISCOUNT_BOOKS` is used to set isbn (id field on API) for discount. And it will be unique discount. Please use comma (,) to separate each isbn.
-- for production please set env on .env.production for otherwise please use .env
+- for production please set env on `.env.production`
+- for beta please use `.env.beta`
+- for otherwise please use `.env`
